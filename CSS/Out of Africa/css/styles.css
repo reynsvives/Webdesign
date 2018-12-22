@@ -1,0 +1,63 @@
+
+body {
+    background-image: url("../img/stripverloopokapi.jpg");
+}
+
+#container {
+    width: 970px;
+    margin: 0px auto;
+    background-color: antiquewhite;
+}
+
+#menu {
+    box-sizing: border-box;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: brown;
+    padding: 30px;
+}
+
+#menu a {
+    padding-right: 30px;
+}
+
+#Column1 {
+    box-sizing: border-box;
+    width: 70%;
+    float: left;
+    padding-top: 25px;
+    padding-left: 20px;
+    background-color: aquamarine;
+}
+
+#Column2 {
+    box-sizing: border-box;
+    width: 30%;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 5px;
+    float: right;
+    background-color: blueviolet;
+}
+
+#ImgKaren {
+    float: left;
+}
+
+#Section1 {
+    width: 80%;
+    box-sizing: border-box;
+    float: left;
+    padding-left: 25px;
+}
+
+#Column2 img {
+    width: 100%;
+    border: 1px solid black;
+}
+
+footer {
+    clear: both;
+    border-top: 5px solid black;
+}

@@ -1,0 +1,29 @@
+
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+section {
+    box-sizing: border-box;
+    float: left;
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+section p {
+    margin: 0px;
+    text-align: justify;
+}
+
+/*
+#MyDiv {
+    box-sizing: border-box;
+    width: 500px;
+    background-color: brown;
+    padding: 50px;
+    margin: 0px;
+    margin-bottom: 10px;
+}*/

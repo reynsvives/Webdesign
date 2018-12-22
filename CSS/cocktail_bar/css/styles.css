@@ -1,0 +1,48 @@
+body {
+    font-family: Verdana, Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+}
+
+#container {
+    width: 95%;
+    background-color: grey;
+    margin: 0px auto;
+}
+
+
+h1, h2 {
+    color: 007e7e;
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h2 {
+    font-size: ;130%;
+}
+
+#weeklySpecials {
+    padding: 20px;
+}
+
+#weeklySpecials h1 {
+    color: red;
+}
+
+#weeklySpecials a:hover{
+    background-color: brown;
+}
+
+footer {
+    font-size: 0.6em;
+}
+
+
+
+
+
+De elementen h1 en h2 hebben volgend kleur: RGB 007e7e, met h1 een lettergrootte van 150% en h2 van 130%. Deze elementen hebben binnen de rubriek “weekly specials” elk een ander kleur. Keuze is vrij te bepalen.
+- De lettergrootte van de footer is de helft van de algemene ingestelde lettergrootte
+- De links in de “weekly specials” hebben een bruine achtergrond bij een hover event.
+- Zorg dat de tekst in de rubriek “weekly specials” niet tegen de rand komt, voorzie wat ruimte ertussen (vrij te bepalen).

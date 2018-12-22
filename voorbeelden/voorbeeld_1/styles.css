@@ -1,0 +1,43 @@
+
+.descendent p {
+	color: red;
+	font-size: 22px;
+}
+
+div > section > p {
+
+	color: blue;
+}
+
+h1 + h3 + h2 {
+	color: yellow;
+}
+
+/*Enkel eerste letter in paragraaf met class firstLetter ander kleur geven*/
+
+p.firstLetter:first-letter { 
+	color: red;
+}
+
+#container {
+	background-color: grey;
+	width: 60%;
+	margin: auto;
+}
+
+#div1 {
+	background-color: orange;
+	float: left;
+	margin-right: 20px;
+}
+
+#div2 {
+	background-color: blue;
+	float: left;
+	margin-right: 20px;
+}
+
+#div3 {
+	background-color: yellow;
+	float: left;
+}

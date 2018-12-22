@@ -1,0 +1,49 @@
+body {
+	font-family: arial, tahoma;
+	background-color: grey;
+}
+
+#container {
+	width: 1000px;
+	background-color: pink;
+	margin: 0px auto;
+}
+
+header {
+	background-color: orange;
+	text-align: center;
+}
+
+
+#sections {
+	background-color: yellow;
+	width: 950px;
+	margin: 0px auto;
+	overflow: hidden;
+}
+
+#section2 {
+	float: left;
+	width: 450px;
+	background-color: blue;
+}
+
+#section2 img {
+	max-width: 450px;
+	border-radius: 50%;
+}
+
+
+
+#section3 {
+	float: left;
+	width: 450px;
+	margin-left: 50px;
+	background-color: blue;
+}
+
+
+footer {
+	clear: left;
+	background-color: orange;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<title>::MySite::</title>
+</head>
+<body>
+
+	<!-- Div met descendent selector -->
+
+	<div class="descendent">
+		<p>This is my site</p>
+		<div>
+			<p>Another paragraph to test the descendent selector</p>
+		</div>	
+	</div>
+
+	<div>
+		<section>
+			<p>This is a paragraph to test the child selector and should be colored blue</p>
+		</section>	
+	</div>
+	
+	<div>
+		<section>
+			<section><p>This is a paragraph to test the child selector and should not be colored blue because paragraph is nested inside another section</p></section>
+		</section>	
+	</div>
+
+	<h1>Title H1</h1>
+	<h3>Title H3</h3>
+	<h2>Title H2</h2>
+
+	<p class="firstLetter">
+	MyName has first letter in red		
+	</p>
+
+
+	<div id = "container">
+
+		<div id="div1">
+		<p>This is div1</p>			
+		</div>
+
+		<div id="div2">
+			<p>This is div2</p>
+		</div>
+
+		<div id="div3">
+			<p>This is div3</p>
+		</div>
+	</div>
+
+</body>
+</html>
