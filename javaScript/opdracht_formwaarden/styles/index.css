@@ -1,0 +1,9 @@
+
+.formLine {
+    padding-top: 10px;
+}
+.formLine label:first-child {
+    display: inline-block;
+    width: 100px;
+    vertical-align: top;
+}
