@@ -1,0 +1,29 @@
+#container {
+
+	width: 1000px;
+	margin: 0 auto;
+	height: 400px;
+	/*background-color: green;*/
+	padding-left: 20px;
+}
+
+
+.divPainting {
+
+	display: inline-block;
+	width: 16%;
+	height: 170px;
+	margin-top: 20px;
+	/*background-color: grey;*/
+	vertical-align: top;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.divPainting img {
+	width: 140px;
+}
+
+h1 {
+	text-align: center;
+}
