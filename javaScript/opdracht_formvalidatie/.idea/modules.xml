@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../leeg_project/.idea/leeg_project.iml" filepath="$PROJECT_DIR$/../leeg_project/.idea/leeg_project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/opdracht_formvalidatie.iml" filepath="$PROJECT_DIR$/.idea/opdracht_formvalidatie.iml" />
     </modules>
   </component>
 </project>

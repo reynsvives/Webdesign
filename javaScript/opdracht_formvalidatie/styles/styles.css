@@ -1,0 +1,32 @@
+
+#container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: table;
+    margin: 0 auto;
+}
+
+form div {
+    display: table-row;
+}
+
+form label {
+    display: table-cell;
+}
+
+form input {
+    display: table-cell;
+    width: 200px;
+    margin-left: 20px;
+}
+
+form span{
+    margin-left: 10px;
+}
