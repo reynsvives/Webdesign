@@ -27,3 +27,14 @@
 h1 {
 	text-align: center;
 }
+
+#newGame {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+#newGame:hover {
+	background-color: cornflowerblue;
+}

@@ -13,7 +13,8 @@ const setup = () => {
     let firstCardElement; //referentie naar element in DOM tree van eerste kaart
     let secondCardElement; //referentie naar element in DOM tree van eerste kaart
 
-    //Functie selectCard die de geselecteerde kaart omdraait
+    //Functie selectCard die de geselecteerde kaart omdraait en de vergelijking doet
+
     const selectCard = (event) =>
     {
         //Er mogen maximum 2 kaarten getoond worden per keer.
@@ -42,34 +43,44 @@ const setup = () => {
 
             if(cardsClicked === 1)
             {
+                //Omdraaien van de eerste kaart
                 firstCard = srcPainting;
                 firstCardElement = cardElement;
+                console.log(firstCardElement);
             }
+
+            console.log(cardsClicked);
 
             if(cardsClicked === 2)
             {
+
+                //Omdraaien van de tweede kaart
                 secondCard = srcPainting;
                 secondCardElement = cardElement;
 
-                //Aantal getrokken kaarten terug op 0 zetten
-                cardsClicked = 0;
-
-                //Vergelijk de kaarten
-
-                if(firstCard !== secondCard)
+                if(firstCardElement === secondCardElement)
                 {
-                    //Terugzetten van het vraagteken als kaarten niet gelijk zijn.
-                    firstCardElement.setAttribute("src", "../img/vraagteken.png");
-                    secondCardElement.setAttribute("src", "../img/vraagteken.png");
+                    console.log(firstCardElement);
+                    console.log(secondCardElement);
+                    alert("U heeft twee keer op dezelfde kaart geklikt ! Kies een andere kaart...");
+                    //Teller terug op 1 zetten want er moet nog een tweede verschillende kaart gekozen worden
+                    cardsClicked = 1;
                 }
                 else
-                {//Als de kaarten correct zijn, dan geven we dat een groene rand met ene bepaalde timer
+                {
+                    //Vergelijk de kaarten
 
-                    firstCardElement.style.borderRadius = "0.5";
+                    if(firstCard !== secondCard)
+                    {
+                        //Terugzetten van het vraagteken als kaarten niet gelijk zijn.
+                        firstCardElement.setAttribute("src", "../img/vraagteken.png");
+                        secondCardElement.setAttribute("src", "../img/vraagteken.png");
+                    }
 
+                    //Aantal getrokken kaarten terug op 0 zetten
+                    cardsClicked = 0;
                 }
             }
-
         }
         //Foutboodschap indien te veel kaarten worden omgedraaid
         else
@@ -79,6 +90,59 @@ const setup = () => {
 
     }
 
+    //Schud kaarten button programmeren
+
+    const shuffleCards = () =>
+    {
+
+        //Array waarin we de nieuw gekozen waarden voor de src naar de image zullen bewaren
+
+        let imgShuffled = [];
+        let listOfCurrentImg = [];
+
+        //Huidige images opzoeken
+        let imgCurrent = document.querySelectorAll(".divPainting img");
+
+        //Alle links naar de images ophalen en in een array steken
+
+        for(let i = 0; i < 12; i++)
+        {
+            //De src van de image uit de node list halen en opslaan de array listOfCurrentImg
+            listOfCurrentImg[i] = imgCurrent[i].getAttribute("srcPainting");
+
+            //Tegelijk draaien we de kaart ook weer om naar het vraagteken
+
+            imgCurrent[i].setAttribute("src", "../img/vraagteken.png");
+        }
+
+        //Shuffelen van de array
+            //We trekken telkens een getal tussen 0 en lengte van de resterende array
+            //We verwijderen het element uit de array en slaan het op array imgShuffled
+            //We gebruiken de splice() methode die het verwijderde element terug geeft
+
+        for(let i = 0; i < 12; i++)
+        {
+
+            //Creëer random getal tussen indexnummers 0 en lengte resterende array
+
+            let randomNumber = Math.floor(Math.random() * (listOfCurrentImg.length - 1));
+
+            let removedImg = listOfCurrentImg.splice(randomNumber, 1);
+            imgShuffled[i] = removedImg;
+
+        }
+
+
+        //Nu de kaarten geschud zijn, de kaarten terug in de DOM tree stoppen
+
+        for(let i = 0; i < 12; i++)
+        {
+            imgCurrent[i].setAttribute("srcPainting", imgShuffled[i]);
+        }
+
+    }
+
+    //Event listeners aan de divs hangen.
 
     for (let i = 0; i < listOfDiv.length; i++)
     {
@@ -87,12 +151,14 @@ const setup = () => {
 
         listOfDiv[i].addEventListener("click", selectCard);
 
-        /*
-        //opslaan link van het schilderij zodat we de link van de afbeelding kunnen vervangen
-        let srcPainting = listOfImg[i].getAttribute("srcPainting");
-        listOfImg[i].setAttribute("src", srcPainting);
-        */
     }
+
+    //Event listener aan de button hangen voor het schudden van de kaarten
+
+    let btnNewGame = document.querySelector("#newGame");
+
+    btnNewGame.addEventListener("click", shuffleCards);
+
 
 }
 window.addEventListener("load", setup);
